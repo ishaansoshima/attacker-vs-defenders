@@ -1,0 +1,9 @@
+A code, concealed in layers deep,
+Unveiling it, a challenge to keep.
+The first, a cipher, Rivest's might,
+Encrypted once, a cryptic sight.
+
+Yet, this is but the outer shell,
+Another layer, AES's spell.
+The ciphertext, now doubly veiled,
+In image form, its truth unveiled.
