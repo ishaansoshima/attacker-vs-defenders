@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Attacker vs Defender</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <style>
+      body,
+      html {
+        height: 100vh;
+        font-family: "Raleway", sans-serif;
+      }
+
+      .bg {
+        background-image: url("https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,q_auto:good/v1/gcs/platform-data-dsc/contentbuilder/GDG-Bevy-ChapterThumbnail.png");
+        height: 100vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div
+      class="bg fs-1 text-center align-items-center justify-content-center pt-5 absolute"
+    >
+      <span class="">TEAM PANDAS</span>
+
+      <form
+        action="/secret"
+        method="POST"
+        style="
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding-top: 12%;
+        "
+      >
+        <div style="max-width: 50%" class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">SECRET KEY</label>
+          <input
+            type="text"
+            class="form-control"
+            name="secret"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+          />
+          <div id="emailHelp" class="form-text fs-4">
+            Let's see if you can crack this! HEHE :)
+          </div>
+        </div>
+        <label for="reduceLifeButton" class="form-label"
+          >Life: <span id="lifeCount">5</span></label
+        >
+        <br />
+        <button
+          type="submit"
+          id="reduceLifeButton"
+          class="btn btn-success mt-5"
+        >
+          GOTTT IT
+        </button>
+      </form>
+    </div>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      let lifeCount = 5;
+      const lifeDisplay = document.getElementById("lifeCount");
+
+      function updateLifeDisplay() {
+        lifeDisplay.textContent = lifeCount;
+      }
+
+      function handleButtonClick() {
+        if (lifeCount > 0) {
+          lifeCount--;
+          updateLifeDisplay();
+        }
+      }
+
+      const button = document.getElementById("reduceLifeButton");
+      button.addEventListener("click", handleButtonClick);
+
+      updateLifeDisplay();
+    });
+  </script>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+</html>
